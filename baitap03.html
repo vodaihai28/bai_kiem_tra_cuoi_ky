@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 03 - Game đoán số</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; }
+        .firework { 
+            display: none; width: 20px; height: 20px; background: red; 
+            border-radius: 50%; margin: auto; animation: explode 1s infinite; 
+        }
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(5); opacity: 0; box-shadow: 0 0 20px yellow; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Đoán số từ 1 - 100</h2>
+    <input type="number" id="guess" min="1" max="100">
+    <button onclick="checkGuess()">Đoán</button>
+    <p id="msg"></p>
+    <p>Số lần thử: <span id="count">0</span></p>
+    <div id="win-effect" class="firework"></div>
+
+   
+</body>
+</html>
